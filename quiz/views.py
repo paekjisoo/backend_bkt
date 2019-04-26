@@ -5,7 +5,7 @@ from .forms import PostForm
 # Create your views here.
 
 def index(request):
-    return render(request, 'blog/index.html')
+    return render(request, 'quiz/index.html')
 
 def list(request):
     posts = Post.objects.all
@@ -21,4 +21,4 @@ def list(request):
     else:
         form = PostForm()
 
-    return render(request, 'blog/list.html', {'posts': posts, 'form': form})
+    return render(request, 'quiz/list.html', {'posts': posts, 'form': form})
